@@ -1,0 +1,11 @@
+Nome: Gabriel Dias Franco de Godoi
+
+ -- Atividade sobre comandos Linux utilizando número octal
+
+ 1- ls -l -> Para listagem longa dos arquivos e diretórios
+
+ 2 - touch ou echo -> Para criar um arquivo, alternativamente também é possível criar diretórios
+
+ 3 - mkdir -> para criar diretórios
+
+ 4 - chmod "Número octal" [nome do diretório ou arquivo] -> para mudar as permissõees do mesmo

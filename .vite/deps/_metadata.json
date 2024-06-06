@@ -1,0 +1,58 @@
+{
+  "hash": "e5f874a5",
+  "configHash": "4ee871af",
+  "lockfileHash": "e3b0c442",
+  "browserHash": "e057261a",
+  "optimized": {
+    "@emotion/react": {
+      "src": "../../node_modules/@emotion/react/dist/emotion-react.browser.esm.js",
+      "file": "@emotion_react.js",
+      "fileHash": "df28c208",
+      "needsInterop": false
+    },
+    "@mui/material": {
+      "src": "../../node_modules/@mui/material/index.js",
+      "file": "@mui_material.js",
+      "fileHash": "79ed9aec",
+      "needsInterop": false
+    },
+    "@tomtom-international/web-sdk-maps": {
+      "src": "../../node_modules/@tomtom-international/web-sdk-maps/dist/maps.min.js",
+      "file": "@tomtom-international_web-sdk-maps.js",
+      "fileHash": "dce6af82",
+      "needsInterop": true
+    },
+    "react": {
+      "src": "../../node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "ee608e82",
+      "needsInterop": true
+    },
+    "react-dom/client": {
+      "src": "../../node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "33248169",
+      "needsInterop": true
+    },
+    "react-router-dom": {
+      "src": "../../node_modules/react-router-dom/dist/index.js",
+      "file": "react-router-dom.js",
+      "fileHash": "c1d2d93f",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-HRO3NKZK": {
+      "file": "chunk-HRO3NKZK.js"
+    },
+    "chunk-WXSKVWTA": {
+      "file": "chunk-WXSKVWTA.js"
+    },
+    "chunk-4JI2AD7N": {
+      "file": "chunk-4JI2AD7N.js"
+    },
+    "chunk-CEQRFMJQ": {
+      "file": "chunk-CEQRFMJQ.js"
+    }
+  }
+}
