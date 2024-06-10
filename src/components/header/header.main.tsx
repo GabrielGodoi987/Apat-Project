@@ -15,10 +15,6 @@ export default function Header() {
      {
       name: "Buscar localização",
       path: PathEnum.MapPath
-     },
-     {
-      name: 'página modelo',
-      path: PathEnum.ModelPath
      }
   ]
 

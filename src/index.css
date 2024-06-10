@@ -14,5 +14,6 @@ code {
 }
 
 .mapBox{
-  height: 400px;
+  width: 100vh;
+  height: 100vh;
 }

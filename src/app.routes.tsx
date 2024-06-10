@@ -3,7 +3,6 @@ import Home from "./pages/HomePage";
 import MapPage from "./pages/MapPage";
 import { Container } from "@mui/material";
 import { RotasModel } from "./models/routes.model";
-import Modelo from "./pages/modelPage";
 import { PathEnum } from "./Enums/PahtName.enum";
 
 export default function AppRoutes() {
@@ -18,11 +17,6 @@ export default function AppRoutes() {
       path: PathEnum.MapPath,
       component: MapPage,
     },
-    {
-      name: "página modelo",
-      path: PathEnum.ModelPath,
-      component: Modelo
-    }
   ];
 
   return (
