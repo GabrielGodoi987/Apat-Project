@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Drawer, Button, FormControl, TextField, Box, Typography, Container, Card, CardHeader, CardContent, CardActions } from "@mui/material";
 import { TypographyEnum } from "../Enums/Typography.enum";
 import { GetMap } from "../utils/GetMap.util";
+import "./css/map.css";
 
 export default function Map() {
     const [openDrawer, setOpenDrawer] = useState<boolean>(false);
@@ -16,52 +17,48 @@ export default function Map() {
         console.log(launchMap());
     }, []);
     return (
-           <Box component="section" sx={{ flexGrow: 1 }}>
+        <Box component="section" sx={{ flexGrow: 1 }}>
+            <Box
+                component="div"
+                className="mapBox"
+                ref={map.mapRef}
+            >
+                {/* Map element with absolute positioning to cover the entire container */}
+            </Box>
 
-        <Box component="div" className="mapBox" ref={map.mapRef} sx={{ flexGrow: 1, position: 'relative', height: '100vh', width: '100vw' }}>
-            {/* Map element with absolute positioning to cover the entire container */}
-        </Box>
-
-            <div style={{width: '40%'}}>
-                <Container component="div" sx={{position: 'fixed', float: "rigth"}}>
+            <Box className="fixedContainer">
+                <Container component="div">
                     <Typography variant={TypographyEnum.h3} color="primary">Denuncie agora</Typography>
-                    <Button variant="contained" onClick={() => setOpenDrawer(true)}>Abra o formulário</Button>
+                    <Button variant="contained" onClick={() => setOpenDrawer(true)} style={{ marginTop: '1rem' }}>
+                        Abra o formulário
+                    </Button>
                 </Container>
-            </div>
+            </Box>
 
             <Container>
                 <Drawer
                     open={openDrawer}
                     onClose={() => setOpenDrawer(false)}
                     anchor="bottom"
-                    sx={{
-                        "& .MuiDrawer-paper": {
-                            width: "60%",
-                            margin: "auto",
-                        }
-                    }}
+                    classes={{ paper: 'drawerPaper' }}
                 >
-            <Card sx={{ display: "flex", flexDirection: "column", alignItems: 'center' }}>
-                <CardHeader title={<Typography variant="h5">Abaixo digíte as informações da sua localização</Typography>} />
-               <CardContent component="form" sx={{ mt: 1, width: '100%', display: 'flex', justifyContent: 'center' }}>
-                    <FormControl sx={{ display: 'flex', flexDirection: 'column', gap: 2, width: '80%' }}>
-                        <TextField
-                         label="Estado, cidade, rua"
-                         fullWidth
-                        />
-                    <TextField
-                     label="CEP (opcional)"
-                     fullWidth
-                    />
-                </FormControl>
-                </CardContent>
-                <CardActions sx={{ justifyContent: 'center', width: '100%' }}>
-                   <Button variant="contained">Pesquisar</Button>
-                </CardActions>
-            </Card>
-
+                    <Card className="card">
+                        <CardHeader title={<Typography variant="h5">Abaixo digíte as informações da sua localização</Typography>} />
+                        <CardContent
+                            component="form"
+                            className="cardContent"
+                        >
+                            <FormControl className="formControl">
+                                <TextField label="Estado, cidade, rua" fullWidth />
+                                <TextField label="CEP (opcional)" fullWidth />
+                            </FormControl>
+                        </CardContent>
+                        <CardActions className="cardActions">
+                            <Button variant="contained">Pesquisar</Button>
+                        </CardActions>
+                    </Card>
                 </Drawer>
             </Container>
-    </Box>
+        </Box>
     );
 }
