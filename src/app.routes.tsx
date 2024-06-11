@@ -3,7 +3,7 @@ import Home from "./pages/HomePage";
 import MapPage from "./pages/MapPage";
 import { Container } from "@mui/material";
 import { RotasModel } from "./models/routes.model";
-import Modelo from "./pages/modelPage";
+import Modelo from "./pages/AboutUsPage";
 import { PathEnum } from "./Enums/PahtName.enum";
 
 export default function AppRoutes() {
